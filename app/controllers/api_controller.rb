@@ -15,4 +15,10 @@ class ApiController < ActionController::API
        raise ApiExceptions::UserError::AuthenticationError.new
     end
   end
+
+  def authenticate_manually token
+    if data = LoginToken.find_by(token: request.headers[:token])
+       data.user
+    end
+  end
 end
