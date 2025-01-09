@@ -9,6 +9,8 @@ gem 'pg'
 
 gem 'activeadmin'
 
+gem 'ruby-kafka'
+
 gem 'sassc-rails'
 
 gem 'devise' 
